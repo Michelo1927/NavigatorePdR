@@ -23,7 +23,7 @@ WebApp/
 
 ## ✨ Caratteristiche
 
-- **198 negozi** mappati su 2 piani
+- **199 negozi** mappati su 2 piani
 - **Algoritmo di Dijkstra** con pesi per trovare il percorso ottimale
 - **4 scale mobili** (2 sistemi: sinistra e destra)
 - **Autocomplete intelligente** per ricerca negozi
@@ -67,3 +67,4 @@ Creato per uso personale - Porta di Roma Shopping Center Navigation
 ---
 
 **Sviluppato con ❤️ per facilitare lo shopping a Porta di Roma**
+
