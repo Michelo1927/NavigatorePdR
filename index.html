@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigatore Porta di Roma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🗺️ Navigatore Porta di Roma</h1>
+                <p class="subtitle">Trova il percorso più breve tra i negozi</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section id="searchSection" class="search-section">
+            <div class="search-card">
+                <h2>Seleziona Percorso</h2>
+                
+                <div class="input-group">
+                    <label for="startShop">🏁 Partenza</label>
+                    <input 
+                        type="text" 
+                        id="startShop" 
+                        placeholder="Cerca negozio di partenza..."
+                        autocomplete="off"
+                    >
+                    <div id="startSuggestions" class="suggestions"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="endShop">🎯 Destinazione</label>
+                    <input 
+                        type="text" 
+                        id="endShop" 
+                        placeholder="Cerca negozio di destinazione..."
+                        autocomplete="off"
+                    >
+                    <div id="endSuggestions" class="suggestions"></div>
+                </div>
+
+                <button id="calculateBtn" class="btn-primary">
+                    Calcola Percorso
+                </button>
+
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">199</div>
+                    <div class="stat-label">Negozi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Piani</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Scale Mobili</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loadingSection" class="loading-section" style="display: none;">
+            <div class="loader"></div>
+            <p>Calcolo del percorso in corso...</p>
+        </section>
+
+        <!-- Route Section -->
+        <section id="routeSection" class="route-section" style="display: none;">
+            <div class="route-header">
+                <button id="backBtn" class="btn-back">
+                    ← Nuova Ricerca
+                </button>
+                <div class="route-info">
+                    <div class="route-shops">
+                        <div class="route-shop start">
+                            <span class="shop-icon">🏁</span>
+                            <span id="routeStartShop" class="shop-name"></span>
+                            <span id="routeStartFloor" class="shop-floor"></span>
+                        </div>
+                        <div class="route-arrow">→</div>
+                        <div class="route-shop end">
+                            <span class="shop-icon">🎯</span>
+                            <span id="routeEndShop" class="shop-name"></span>
+                            <span id="routeEndFloor" class="shop-floor"></span>
+                        </div>
+                    </div>
+                    <div class="route-stats">
+                        <span id="routeSteps" class="route-stat"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steps-container" id="stepsContainer">
+                <!-- Steps will be added here dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="navigation.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
