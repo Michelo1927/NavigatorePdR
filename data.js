@@ -1,5 +1,41 @@
-// Dati negozi Porta di Roma
-const SHOPS_DATA = [
+// Configurazione centri commerciali
+const MALLS_CONFIG = [
+    {
+        id: 'porta_di_roma',
+        name: 'Porta di Roma',
+        location: 'Roma, Italia',
+        description: 'Il più grande centro commerciale di Roma',
+        floors: 2,
+        escalators: 4,
+        totalShops: 199,
+        logo: '🏛️'
+    },
+    {
+        id: 'granroma',
+        name: 'GranRoma',
+        location: 'Roma, Italia',
+        description: 'Centro commerciale nella zona Est di Roma',
+        floors: 2,
+        escalators: 2,
+        totalShops: 93,
+        logo: '🏬'
+    },
+    {
+        id: 'altro_mall',
+        name: 'Altri Centri Commerciali',
+        location: 'In arrivo...',
+        description: 'Presto disponibili altri centri',
+        floors: 0,
+        escalators: 0,
+        totalShops: 0,
+        logo: '🏢',
+        comingSoon: true
+    }
+];
+
+// Dati negozi per centro commerciale
+const MALLS_DATA = {
+    'porta_di_roma': [
     // Piano 0 - Anello Esterno (40 negozi)
     { id: 'p0_outer_1', name: 'Nitò', floor: 0, zone: 'OUTER', position: 1 },
     { id: 'p0_outer_2', name: 'Capatoast', floor: 0, zone: 'OUTER', position: 2 },
@@ -95,7 +131,7 @@ const SHOPS_DATA = [
     { id: 'p0_isl_dx_12', name: 'Medi Market', floor: 0, zone: 'ISLAND_DX', position: 12 },
     { id: 'p0_isl_dx_13', name: 'Kasanova', floor: 0, zone: 'ISLAND_DX', position: 13 },
     { id: 'p0_isl_dx_14', name: 'Talco', floor: 0, zone: 'ISLAND_DX', position: 14 },
-    { id: 'p0_isl_dx_15', name: 'Douglas DX', floor: 0, zone: 'ISLAND_DX', position: 15 },
+    { id: 'p0_isl_dx_15', name: 'Douglas', floor: 0, zone: 'ISLAND_DX', position: 15 },
     { id: 'p0_isl_dx_16', name: 'La Casa del Tabacco', floor: 0, zone: 'ISLAND_DX', position: 16 },
     { id: 'p0_isl_dx_17', name: 'Marlù', floor: 0, zone: 'ISLAND_DX', position: 17 },
     { id: 'p0_isl_dx_18', name: 'Primadonna Collection', floor: 0, zone: 'ISLAND_DX', position: 18 },
@@ -208,4 +244,117 @@ const SHOPS_DATA = [
     { id: 'p1_isl_ctr_42', name: 'David Naman', floor: 1, zone: 'ISLAND_CENTER', position: 42 },
     { id: 'p1_isl_ctr_43', name: 'Doppelganger piano 1', floor: 1, zone: 'ISLAND_CENTER', position: 43 },
     { id: 'p1_isl_ctr_44', name: 'Windtre (piano 1)', floor: 1, zone: 'ISLAND_CENTER', position: 44 }
-];
+    ],
+    
+    // Dati GranRoma
+    'granroma': [
+        // Piano 0 - Anello Esterno (25 negozi)
+        { id: 'gr_p0_outer_1', name: "Deco'", floor: 0, zone: 'OUTER', position: 1 },
+        { id: 'gr_p0_outer_2', name: 'Cisalfa Sport', floor: 0, zone: 'OUTER', position: 2 },
+        { id: 'gr_p0_outer_3', name: 'Dentalpro', floor: 0, zone: 'OUTER', position: 3 },
+        { id: 'gr_p0_outer_4', name: 'La Casina Del Caffe', floor: 0, zone: 'OUTER', position: 4 },
+        { id: 'gr_p0_outer_5', name: 'Kasanova+', floor: 0, zone: 'OUTER', position: 5 },
+        { id: 'gr_p0_outer_6', name: 'Mayoral', floor: 0, zone: 'OUTER', position: 6 },
+        { id: 'gr_p0_outer_7', name: 'Mango', floor: 0, zone: 'OUTER', position: 7 },
+        { id: 'gr_p0_outer_8', name: 'Nuvolari', floor: 0, zone: 'OUTER', position: 8 },
+        { id: 'gr_p0_outer_9', name: 'Flying Tiger Copenhagen', floor: 0, zone: 'OUTER', position: 9 },
+        { id: 'gr_p0_outer_10', name: 'Gelateria Cremilla', floor: 0, zone: 'OUTER', position: 10 },
+        { id: 'gr_p0_outer_11', name: 'Jdsports', floor: 0, zone: 'OUTER', position: 11 },
+        { id: 'gr_p0_outer_12', name: 'Zara', floor: 0, zone: 'OUTER', position: 12 },
+        { id: 'gr_p0_outer_13', name: 'Tramas', floor: 0, zone: 'OUTER', position: 13 },
+        { id: 'gr_p0_outer_14', name: 'Amorestore', floor: 0, zone: 'OUTER', position: 14 },
+        { id: 'gr_p0_outer_15', name: 'Tezenis', floor: 0, zone: 'OUTER', position: 15 },
+        { id: 'gr_p0_outer_16', name: 'Ovs', floor: 0, zone: 'OUTER', position: 16 },
+        { id: 'gr_p0_outer_17', name: 'Punt Roma', floor: 0, zone: 'OUTER', position: 17 },
+        { id: 'gr_p0_outer_18', name: 'Sorbino', floor: 0, zone: 'OUTER', position: 18 },
+        { id: 'gr_p0_outer_19', name: 'Primadonna Collection', floor: 0, zone: 'OUTER', position: 19 },
+        { id: 'gr_p0_outer_20', name: 'Yvesrocher', floor: 0, zone: 'OUTER', position: 20 },
+        { id: 'gr_p0_outer_21', name: 'Cex', floor: 0, zone: 'OUTER', position: 21 },
+        { id: 'gr_p0_outer_22', name: 'Èqui', floor: 0, zone: 'OUTER', position: 22 },
+        { id: 'gr_p0_outer_23', name: 'Skechers', floor: 0, zone: 'OUTER', position: 23 },
+        { id: 'gr_p0_outer_24', name: 'Douglas', floor: 0, zone: 'OUTER', position: 24 },
+        { id: 'gr_p0_outer_25', name: 'Maisons Du Monde', floor: 0, zone: 'OUTER', position: 25 },
+
+        // Piano 0 - Isola Centrale (21 negozi)
+        { id: 'gr_p0_isl_1', name: 'Stroili', floor: 0, zone: 'ISLAND_CENTER', position: 1 },
+        { id: 'gr_p0_isl_2', name: 'Carpisa', floor: 0, zone: 'ISLAND_CENTER', position: 2 },
+        { id: 'gr_p0_isl_3', name: 'Lama Optical', floor: 0, zone: 'ISLAND_CENTER', position: 3 },
+        { id: 'gr_p0_isl_4', name: 'Miniso', floor: 0, zone: 'ISLAND_CENTER', position: 4 },
+        { id: 'gr_p0_isl_5', name: 'Parfois', floor: 0, zone: 'ISLAND_CENTER', position: 5 },
+        { id: 'gr_p0_isl_6', name: 'Bluespirit 2', floor: 0, zone: 'ISLAND_CENTER', position: 6 },
+        { id: 'gr_p0_isl_7', name: 'Mondovista', floor: 0, zone: 'ISLAND_CENTER', position: 7 },
+        { id: 'gr_p0_isl_8', name: 'Omai', floor: 0, zone: 'ISLAND_CENTER', position: 8 },
+        { id: 'gr_p0_isl_9', name: 'Talco', floor: 0, zone: 'ISLAND_CENTER', position: 9 },
+        { id: 'gr_p0_isl_10', name: 'Kamalion', floor: 0, zone: 'ISLAND_CENTER', position: 10 },
+        { id: 'gr_p0_isl_11', name: 'Grandvision', floor: 0, zone: 'ISLAND_CENTER', position: 11 },
+        { id: 'gr_p0_isl_12', name: 'Calzedonia', floor: 0, zone: 'ISLAND_CENTER', position: 12 },
+        { id: 'gr_p0_isl_13', name: 'Bluespirit', floor: 0, zone: 'ISLAND_CENTER', position: 13 },
+        { id: 'gr_p0_isl_14', name: 'Satur', floor: 0, zone: 'ISLAND_CENTER', position: 14 },
+        { id: 'gr_p0_isl_15', name: 'Bata', floor: 0, zone: 'ISLAND_CENTER', position: 15 },
+        { id: 'gr_p0_isl_16', name: 'Awlab', floor: 0, zone: 'ISLAND_CENTER', position: 16 },
+        { id: 'gr_p0_isl_17', name: 'Intimissimi', floor: 0, zone: 'ISLAND_CENTER', position: 17 },
+        { id: 'gr_p0_isl_18', name: 'Vodafone', floor: 0, zone: 'ISLAND_CENTER', position: 18 },
+        { id: 'gr_p0_isl_19', name: 'Originalmarines', floor: 0, zone: 'ISLAND_CENTER', position: 19 },
+        { id: 'gr_p0_isl_20', name: 'Medimarket', floor: 0, zone: 'ISLAND_CENTER', position: 20 },
+        { id: 'gr_p0_isl_21', name: 'Snipes', floor: 0, zone: 'ISLAND_CENTER', position: 21 },
+
+        // Piano 1 - Anello Esterno (21 negozi)
+        { id: 'gr_p1_outer_1', name: 'Burger King', floor: 1, zone: 'OUTER', position: 1 },
+        { id: 'gr_p1_outer_2', name: "Hamerica's", floor: 1, zone: 'OUTER', position: 2 },
+        { id: 'gr_p1_outer_3', name: 'Kitikate', floor: 1, zone: 'OUTER', position: 3 },
+        { id: 'gr_p1_outer_4', name: 'Mister Games', floor: 1, zone: 'OUTER', position: 4 },
+        { id: 'gr_p1_outer_5', name: 'Estasi Profumerie', floor: 1, zone: 'OUTER', position: 5 },
+        { id: 'gr_p1_outer_6', name: 'Odstore', floor: 1, zone: 'OUTER', position: 6 },
+        { id: 'gr_p1_outer_7', name: 'Jack & Jones', floor: 1, zone: 'OUTER', position: 7 },
+        { id: 'gr_p1_outer_8', name: 'Stradivarius', floor: 1, zone: 'OUTER', position: 8 },
+        { id: 'gr_p1_outer_9', name: 'Zara', floor: 1, zone: 'OUTER', position: 9 },
+        { id: 'gr_p1_outer_10', name: 'Muy Mucho', floor: 1, zone: 'OUTER', position: 10 },
+        { id: 'gr_p1_outer_11', name: 'Pull & Bear', floor: 1, zone: 'OUTER', position: 11 },
+        { id: 'gr_p1_outer_12', name: 'Action', floor: 1, zone: 'OUTER', position: 12 },
+        { id: 'gr_p1_outer_13', name: 'Bershka', floor: 1, zone: 'OUTER', position: 13 },
+        { id: 'gr_p1_outer_14', name: 'Pepco', floor: 1, zone: 'OUTER', position: 14 },
+        { id: 'gr_p1_outer_15', name: 'Live978', floor: 1, zone: 'OUTER', position: 15 },
+        { id: 'gr_p1_outer_16', name: 'Mediaworld', floor: 1, zone: 'OUTER', position: 16 },
+        { id: 'gr_p1_outer_17', name: "Villabebe'", floor: 1, zone: 'OUTER', position: 17 },
+        { id: 'gr_p1_outer_18', name: 'Billy Tacos', floor: 1, zone: 'OUTER', position: 18 },
+        { id: 'gr_p1_outer_19', name: 'La Piadineria', floor: 1, zone: 'OUTER', position: 19 },
+        { id: 'gr_p1_outer_20', name: 'Roadhouse Restaurant', floor: 1, zone: 'OUTER', position: 20 },
+        { id: 'gr_p1_outer_21', name: 'Fantasie Di Napoli', floor: 1, zone: 'OUTER', position: 21 },
+
+        // Piano 1 - Isola Centrale (19 negozi)
+        { id: 'gr_p1_isl_1', name: 'Caffè Vergnano 1882', floor: 1, zone: 'ISLAND_CENTER', position: 1 },
+        { id: 'gr_p1_isl_2', name: 'Tabaccheria', floor: 1, zone: 'ISLAND_CENTER', position: 2 },
+        { id: 'gr_p1_isl_3', name: 'Queen Helena', floor: 1, zone: 'ISLAND_CENTER', position: 3 },
+        { id: 'gr_p1_isl_4', name: 'Rinascimento', floor: 1, zone: 'ISLAND_CENTER', position: 4 },
+        { id: 'gr_p1_isl_5', name: 'Sartoria Italiana', floor: 1, zone: 'ISLAND_CENTER', position: 5 },
+        { id: 'gr_p1_isl_6', name: 'Pink Gioielli', floor: 1, zone: 'ISLAND_CENTER', position: 6 },
+        { id: 'gr_p1_isl_7', name: 'Brend Atelier', floor: 1, zone: 'ISLAND_CENTER', position: 7 },
+        { id: 'gr_p1_isl_8', name: 'Dan Jhon', floor: 1, zone: 'ISLAND_CENTER', position: 8 },
+        { id: 'gr_p1_isl_9', name: 'Guess', floor: 1, zone: 'ISLAND_CENTER', position: 9 },
+        { id: 'gr_p1_isl_10', name: "D'S Damat", floor: 1, zone: 'ISLAND_CENTER', position: 10 },
+        { id: 'gr_p1_isl_11', name: 'Dly', floor: 1, zone: 'ISLAND_CENTER', position: 11 },
+        { id: 'gr_p1_isl_12', name: 'Dverso', floor: 1, zone: 'ISLAND_CENTER', position: 12 },
+        { id: 'gr_p1_isl_13', name: 'Gioiellivalenza', floor: 1, zone: 'ISLAND_CENTER', position: 13 },
+        { id: 'gr_p1_isl_14', name: 'Wind Tre', floor: 1, zone: 'ISLAND_CENTER', position: 14 },
+        { id: 'gr_p1_isl_15', name: 'Findomestic', floor: 1, zone: 'ISLAND_CENTER', position: 15 },
+        { id: 'gr_p1_isl_16', name: 'Marlù', floor: 1, zone: 'ISLAND_CENTER', position: 16 },
+        { id: 'gr_p1_isl_17', name: 'Giunti Al Punto', floor: 1, zone: 'ISLAND_CENTER', position: 17 },
+        { id: 'gr_p1_isl_18', name: 'Machapokè', floor: 1, zone: 'ISLAND_CENTER', position: 18 },
+        { id: 'gr_p1_isl_19', name: 'Minipizza 22C M2', floor: 1, zone: 'ISLAND_CENTER', position: 19 },
+
+        // Piano 1 - Mini Isole (3 negozi separati)
+        { id: 'gr_p1_mini_1', name: 'I Baccanali', floor: 1, zone: 'ISLAND_MINI', position: 1 },
+        { id: 'gr_p1_mini_2', name: 'Capatoast Toasteria', floor: 1, zone: 'ISLAND_MINI', position: 2 },
+        { id: 'gr_p1_mini_3', name: 'Equivalenza', floor: 1, zone: 'ISLAND_MINI', position: 3 },
+
+        // Scale Mobili
+        { id: 'gr_stairs_sx_p0', name: '🔼 Scala Mobile SX (Piano 0→1)', floor: 0, zone: 'STAIRS', position: 1 },
+        { id: 'gr_stairs_sx_p1', name: '🔽 Scala Mobile SX (Piano 1→0)', floor: 1, zone: 'STAIRS', position: 1 },
+        { id: 'gr_stairs_dx_p0', name: '🔼 Scala Mobile DX (Piano 0→1)', floor: 0, zone: 'STAIRS', position: 2 },
+        { id: 'gr_stairs_dx_p1', name: '🔽 Scala Mobile DX (Piano 1→0)', floor: 1, zone: 'STAIRS', position: 2 }
+    ]
+};
+
+// Variabile globale per il mall selezionato
+let selectedMall = null;
+let SHOPS_DATA = [];

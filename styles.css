@@ -40,6 +40,10 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.header-content {
+    position: relative;
+}
+
 .header-content h1 {
     font-size: 28px;
     margin-bottom: 8px;
@@ -48,6 +52,126 @@ body {
 .subtitle {
     opacity: 0.9;
     font-size: 16px;
+}
+
+.change-mall-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 12px;
+}
+
+.change-mall-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mall Selection Section */
+.mall-selection-section {
+    animation: fadeIn 0.3s ease;
+}
+
+.malls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.mall-card {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.mall-card:not(.coming-soon) {
+    cursor: pointer;
+}
+
+.mall-card:not(.coming-soon):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.mall-card.coming-soon {
+    opacity: 0.6;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+}
+
+.mall-logo {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.mall-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.mall-location {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.mall-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.mall-stats-mini {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.btn-select-mall {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-select-mall:hover {
+    background: #1565C0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--text-secondary);
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* Search Section */
@@ -576,6 +700,23 @@ body {
     
     .header-content h1 {
         font-size: 24px;
+    }
+    
+    .malls-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .mall-card {
+        padding: 24px;
+    }
+    
+    .mall-logo {
+        font-size: 48px;
+    }
+    
+    .mall-name {
+        font-size: 20px;
     }
     
     .search-card {

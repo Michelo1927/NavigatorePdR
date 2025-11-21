@@ -1,10 +1,14 @@
 // App principale
-const navigationService = new NavigationService(SHOPS_DATA);
+let navigationService = null;
 
 // Elementi DOM
+const mallSelectionSection = document.getElementById('mallSelectionSection');
+const mainHeader = document.getElementById('mainHeader');
 const searchSection = document.getElementById('searchSection');
 const loadingSection = document.getElementById('loadingSection');
 const routeSection = document.getElementById('routeSection');
+const mallsGrid = document.getElementById('mallsGrid');
+const changeMallBtn = document.getElementById('changeMallBtn');
 
 const startShopInput = document.getElementById('startShop');
 const endShopInput = document.getElementById('endShop');
@@ -211,8 +215,123 @@ backBtn.addEventListener('click', () => {
     checkCanCalculate();
 });
 
-// Inizializzazione
-checkCanCalculate();
+// === GESTIONE SELEZIONE MALL ===
+function initializeMallSelection() {
+    mallsGrid.innerHTML = MALLS_CONFIG.map(mall => `
+        <div class="mall-card ${mall.comingSoon ? 'coming-soon' : ''}" data-mall-id="${mall.id}">
+            <div class="mall-logo">${mall.logo}</div>
+            <h3 class="mall-name">${mall.name}</h3>
+            <p class="mall-location">${mall.location}</p>
+            <p class="mall-description">${mall.description}</p>
+            ${!mall.comingSoon ? `
+                <div class="mall-stats-mini">
+                    <span>${mall.totalShops} negozi</span>
+                    <span>•</span>
+                    <span>${mall.floors} piani</span>
+                </div>
+                <button class="btn-select-mall">Seleziona</button>
+            ` : `
+                <div class="coming-soon-badge">Prossimamente</div>
+            `}
+        </div>
+    `).join('');
 
-console.log('✅ Navigatore Porta di Roma caricato!');
-console.log(`📊 ${SHOPS_DATA.length} negozi disponibili`);
+    // Aggiungi event listeners
+    document.querySelectorAll('.btn-select-mall').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const card = e.target.closest('.mall-card');
+            const mallId = card.dataset.mallId;
+            selectMall(mallId);
+        });
+    });
+}
+
+function selectMall(mallId) {
+    const mall = MALLS_CONFIG.find(m => m.id === mallId);
+    if (!mall || mall.comingSoon) return;
+
+    // Salva la selezione
+    selectedMall = mall;
+    SHOPS_DATA = MALLS_DATA[mallId] || [];
+    
+    // Salva in localStorage
+    localStorage.setItem('selectedMall', mallId);
+
+    // Inizializza il servizio di navigazione
+    navigationService = new NavigationService(SHOPS_DATA);
+
+    // Aggiorna UI
+    document.getElementById('mallTitle').innerHTML = `${mall.logo} Navigatore ${mall.name}`;
+    document.getElementById('mallSubtitle').textContent = mall.description;
+
+    // Aggiorna stats
+    updateStats(mall);
+
+    // Mostra la sezione di ricerca
+    mallSelectionSection.style.display = 'none';
+    mainHeader.style.display = 'block';
+    searchSection.style.display = 'block';
+
+    console.log(`✅ Centro commerciale ${mall.name} selezionato!`);
+    console.log(`📊 ${SHOPS_DATA.length} negozi disponibili`);
+}
+
+function updateStats(mall) {
+    const statsGrid = document.getElementById('statsGrid');
+    statsGrid.innerHTML = `
+        <div class="stat-card">
+            <div class="stat-number">${mall.totalShops}</div>
+            <div class="stat-label">Negozi</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">${mall.floors}</div>
+            <div class="stat-label">Piani</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">${mall.escalators}</div>
+            <div class="stat-label">Scale Mobili</div>
+        </div>
+    `;
+}
+
+// Bottone per cambiare centro commerciale
+changeMallBtn.addEventListener('click', () => {
+    // Reset
+    selectedMall = null;
+    SHOPS_DATA = [];
+    navigationService = null;
+    
+    // Reset form
+    startShopInput.value = '';
+    endShopInput.value = '';
+    selectedStartShop = null;
+    selectedEndShop = null;
+    errorMessage.classList.remove('show');
+    
+    // Rimuovi selezione salvata
+    localStorage.removeItem('selectedMall');
+    
+    // Rigenera le card dei centri commerciali
+    initializeMallSelection();
+    
+    // Mostra selezione mall
+    searchSection.style.display = 'none';
+    routeSection.style.display = 'none';
+    mainHeader.style.display = 'none';
+    mallSelectionSection.style.display = 'block';
+});
+
+// Inizializzazione
+function init() {
+    // Controlla se c'è un mall salvato
+    const savedMallId = localStorage.getItem('selectedMall');
+    if (savedMallId && MALLS_DATA[savedMallId]) {
+        selectMall(savedMallId);
+    } else {
+        initializeMallSelection();
+    }
+    checkCanCalculate();
+}
+
+// Avvia l'app
+init();

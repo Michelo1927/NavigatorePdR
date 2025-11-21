@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Navigatore Porta di Roma | Trova il percorso tra i negozi</title>
-    <meta name="description" content="Trova il percorso più breve tra i 199 negozi del centro commerciale Porta di Roma. Navigatore intelligente con mappa interattiva e indicazioni precise.">
-    <meta name="keywords" content="Porta di Roma, centro commerciale, navigatore, mappa negozi, percorso negozi, shopping Roma">
-    <meta name="author" content="Navigatore PDR">
+    <title>Navigatore Centri Commerciali | Trova il percorso tra i negozi</title>
+    <meta name="description" content="Trova il percorso più breve tra i negozi di tutti i principali centri commerciali. Navigatore intelligente multi-centro con indicazioni precise.">
+    <meta name="keywords" content="centro commerciale, navigatore, mappa negozi, percorso negozi, shopping, Porta di Roma, Centro Sicilia">
+    <meta name="author" content="Navigatore Centri Commerciali">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://navigatorepdr.netlify.app/">
-    <meta property="og:title" content="Navigatore Porta di Roma | Trova il percorso tra i negozi">
-    <meta property="og:description" content="Trova il percorso più breve tra i 199 negozi del centro commerciale Porta di Roma.">
+    <meta property="og:title" content="Navigatore Centri Commerciali | Trova il percorso tra i negozi">
+    <meta property="og:description" content="Trova il percorso più breve tra i negozi di tutti i principali centri commerciali italiani.">
     <meta property="og:image" content="https://navigatorepdr.netlify.app/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://navigatorepdr.netlify.app/">
-    <meta property="twitter:title" content="Navigatore Porta di Roma">
-    <meta property="twitter:description" content="Trova il percorso più breve tra i 199 negozi del centro commerciale Porta di Roma.">
+    <meta property="twitter:title" content="Navigatore Centri Commerciali">
+    <meta property="twitter:description" content="Trova il percorso più breve tra i negozi di tutti i principali centri commerciali italiani.">
     <meta property="twitter:image" content="https://navigatorepdr.netlify.app/og-image.jpg">
     
     <!-- Favicon -->
@@ -34,16 +34,31 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <header class="header">
+        <!-- Mall Selection Section -->
+        <section id="mallSelectionSection" class="mall-selection-section">
+            <header class="header">
+                <div class="header-content">
+                    <h1>🗺️ Navigatore Centri Commerciali</h1>
+                    <p class="subtitle">Scegli il tuo centro commerciale</p>
+                </div>
+            </header>
+
+            <div class="malls-grid" id="mallsGrid">
+                <!-- Dinamically populated -->
+            </div>
+        </section>
+
+        <!-- Header (hidden initially) -->
+        <header class="header" id="mainHeader" style="display: none;">
             <div class="header-content">
-                <h1>🗺️ Navigatore Porta di Roma</h1>
-                <p class="subtitle">Trova il percorso più breve tra i negozi</p>
+                <button id="changeMallBtn" class="change-mall-btn">← Cambia Centro</button>
+                <h1 id="mallTitle">🗺️ Navigatore</h1>
+                <p class="subtitle" id="mallSubtitle">Trova il percorso più breve tra i negozi</p>
             </div>
         </header>
 
         <!-- Search Section -->
-        <section id="searchSection" class="search-section">
+        <section id="searchSection" class="search-section" style="display: none;">
             <div class="search-card">
                 <h2>Seleziona Percorso</h2>
                 
@@ -77,19 +92,8 @@
             </div>
 
             <!-- Stats -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">199</div>
-                    <div class="stat-label">Negozi</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Piani</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Scale Mobili</div>
-                </div>
+            <div class="stats-grid" id="statsGrid">
+                <!-- Dinamically populated -->
             </div>
         </section>
 
@@ -132,7 +136,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Navigatore Porta di Roma. Tutti i diritti riservati.</p>
+            <p>&copy; 2025 Navigatore Centri Commerciali. Tutti i diritti riservati.</p>
             <p><a href="privacy.html" class="footer-link">Privacy Policy</a> | <a href="privacy.html#cookies" class="footer-link">Cookie Policy</a></p>
         </footer>
     </div>
