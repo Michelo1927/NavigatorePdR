@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Shopping | Consigli e Novità sui Centri Commerciali</title>
+    <meta name="description" content="Articoli, consigli e guide per lo shopping nei centri commerciali. Scopri le ultime aperture, eventi speciali e strategie per ottimizzare le tue visite.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .blog-hero {
+            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .blog-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        .blog-content {
+            padding: 25px;
+        }
+        .blog-date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .blog-card h3 {
+            color: #FF5722;
+            margin: 0 0 15px 0;
+            font-size: 22px;
+        }
+        .blog-excerpt {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .blog-tag {
+            background: #FFF3E0;
+            color: #E65100;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .read-more {
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 12px 24px;
+            background: #FF5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #E64A19;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="index.html" class="back-btn">← Torna al Navigatore</a>
+        
+        <div class="blog-hero">
+            <h1>📰 Blog Shopping</h1>
+            <p>Consigli, novità e guide per lo shopping nei centri commerciali</p>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <article class="blog-card">
+                <div class="blog-image">🛍️</div>
+                <div class="blog-content">
+                    <div class="blog-date">22 Novembre 2025</div>
+                    <h3>10 Errori da Evitare Durante lo Shopping Natalizio</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Consigli</span>
+                        <span class="blog-tag">Natale</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Con le festività natalizie alle porte, i centri commerciali diventano luoghi affollati e caotici. 
+                        Scopri gli errori più comuni che le persone fanno durante lo shopping natalizio e come evitarli 
+                        per rendere la tua esperienza più piacevole ed efficiente.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>1. Non pianificare in anticipo</strong> - Il più grande errore è arrivare al centro senza 
+                        una lista. Questo porta a stress, acquisti impulsivi e spreco di tempo. Fai una lista dettagliata 
+                        prima di partire.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>2. Andare nei weekend</strong> - Sabato e domenica sono i giorni più affollati dell'anno. 
+                        Se possibile, vai in settimana, preferibilmente martedì o mercoledì mattina.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>3. Ignorare i budget</strong> - Stabilisci un budget per ogni regalo e rispettalo. 
+                        È facile farsi prendere dall'entusiasmo natalizio e spendere troppo.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-card">
+                <div class="blog-image">🗺️</div>
+                <div class="blog-content">
+                    <div class="blog-date">20 Novembre 2025</div>
+                    <h3>Come Usare il Navigatore per Risparmiare 2 Ore al Centro Commerciale</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Tutorial</span>
+                        <span class="blog-tag">Efficienza</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Uno studio recente ha dimostrato che la persona media perde 45 minuti per ogni visita al centro 
+                        commerciale solo cercando negozi e orientandosi. Con Mall Nav, puoi 
+                        ridurre drasticamente questo tempo sprecato.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>La strategia del percorso ottimale:</strong> Invece di vagare casualmente, usa il navigatore 
+                        per pianificare la sequenza ottimale di negozi. Inizia dal più lontano e procedi verso l'uscita, 
+                        così non dovrai tornare indietro con le borse pesanti.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Risparmia energia:</strong> Camminare inutilmente per chilometri ti stanca e riduce la 
+                        tua capacità di prendere decisioni d'acquisto intelligenti. Il percorso ottimale ti mantiene 
+                        fresco e concentrato.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card">
+                <div class="blog-image">💰</div>
+                <div class="blog-content">
+                    <div class="blog-date">18 Novembre 2025</div>
+                    <h3>Saldi Invernali 2026: Quando Iniziano e Come Prepararsi</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Saldi</span>
+                        <span class="blog-tag">Risparmio</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        I saldi invernali 2026 stanno arrivando! In Italia, inizieranno ufficialmente il 4 gennaio 2026 
+                        e dureranno fino a fine febbraio. Ecco come massimizzare i tuoi risparmi.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Prima settimana:</strong> Gli sconti partono dal 30-40%. È il momento migliore per articoli 
+                        di punta e taglie standard. C'è ancora ampia scelta ma i prezzi non sono al minimo.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Seconda-terza settimana:</strong> Sconti fino al 50-60%. Buon compromesso tra scelta e 
+                        risparmio. Taglie popolari iniziano a scarseggiare.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Ultime settimane:</strong> Sconti fino al 70-80%. Selezione limitata ma prezzi minimi. 
+                        Perfetto per taglie non standard o se sei flessibile sullo stile.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="blog-card">
+                <div class="blog-image">🏛️</div>
+                <div class="blog-content">
+                    <div class="blog-date">15 Novembre 2025</div>
+                    <h3>Porta di Roma: Guida Completa al Centro Commerciale</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Porta di Roma</span>
+                        <span class="blog-tag">Guida</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Porta di Roma è il centro commerciale più grande della capitale con 199 negozi su 2 piani. 
+                        Questa guida ti aiuterà a orientarti e a sfruttare al meglio la tua visita.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Layout e struttura:</strong> Il centro è diviso in un anello esterno che circonda tutto 
+                        il perimetro e due isole interne al piano terra (sinistra e destra) più un'isola centrale al 
+                        primo piano. Le 4 scale mobili collegano i due livelli strategicamente posizionate.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Negozi principali:</strong> Troverai tutti i brand più famosi: Zara, H&M, MediaWorld, 
+                        Euronics, Decathlon, e molti altri. Il piano terra ospita principalmente moda e accessori, 
+                        mentre il piano 1 include elettronica, sport e intrattenimento.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Servizi:</strong> 6 aree ristorazione, cinema multisala, area giochi per bambini, 
+                        bancomat, parcheggio coperto su 2 livelli con 6000 posti auto.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="blog-card">
+                <div class="blog-image">👨‍👩‍👧</div>
+                <div class="blog-content">
+                    <div class="blog-date">12 Novembre 2025</div>
+                    <h3>Shopping con Bambini: La Guida Definitiva per Genitori</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Famiglia</span>
+                        <span class="blog-tag">Bambini</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Portare i bambini al centro commerciale può essere stressante, ma con la giusta preparazione 
+                        può diventare un'esperienza piacevole per tutta la famiglia.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Tempistica perfetta:</strong> Evita orari di fame e sonno. Il momento ideale è dopo il 
+                        pranzo e un breve riposo, quando i bambini sono sazi ed energici ma non sovraeccitati.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Kit di sopravvivenza:</strong> Porta snack salutari, acqua, salviette umide, un cambio 
+                        di vestiti, e qualche giocattolo/libro per l'intrattenimento durante le attese.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Strategia del premio:</strong> Prometti una visita all'area giochi o un piccolo premio 
+                        alla fine se si comportano bene. Stabilisci regole chiare prima di entrare.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Coinvolgimento attivo:</strong> Fai partecipare i bambini alle decisioni quando possibile. 
+                        "Quale colore preferisci?" può trasformare una noiosa sessione di shopping in un gioco.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="blog-card">
+                <div class="blog-image">🎯</div>
+                <div class="blog-content">
+                    <div class="blog-date">10 Novembre 2025</div>
+                    <h3>Black Friday 2025: Strategie per Non Farsi Truffare</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Black Friday</span>
+                        <span class="blog-tag">Offerte</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Il Black Friday è passato da fenomeno americano a evento globale, ma non tutte le "offerte" 
+                        sono reali. Ecco come riconoscere gli affari veri dalle truffe.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Traccia i prezzi in anticipo:</strong> 2-3 settimane prima del Black Friday, annota i 
+                        prezzi degli articoli che ti interessano. Molti negozi aumentano i prezzi poco prima per poi 
+                        "scontarli" al prezzo normale.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Diffida degli sconti esagerati:</strong> Sconto del 80-90%? Probabilmente è merce di 
+                        bassa qualità, modelli vecchi, o il prezzo originale era gonfiato. Gli sconti reali si aggirano 
+                        intorno al 30-50%.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Controlla online:</strong> Prima di comprare, verifica il prezzo su Amazon, ePRICE o 
+                        altri comparatori. Spesso lo stesso articolo costa meno online.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Leggi le condizioni di reso:</strong> Molti negozi limitano i resi per articoli in 
+                        offerta. Assicurati di poter restituire l'articolo se non ti soddisfa.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 7 -->
+            <article class="blog-card">
+                <div class="blog-image">🌱</div>
+                <div class="blog-content">
+                    <div class="blog-date">8 Novembre 2025</div>
+                    <h3>Shopping Sostenibile: Come Ridurre l'Impatto Ambientale</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Sostenibilità</span>
+                        <span class="blog-tag">Ambiente</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Lo shopping può avere un impatto significativo sull'ambiente, ma ci sono molti modi per ridurre 
+                        la tua impronta ecologica mentre fai acquisti.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Porta borse riutilizzabili:</strong> Le borse di plastica sono uno dei principali 
+                        inquinanti. Porta sempre con te borse di stoffa riutilizzabili. Molti negozi offrono anche 
+                        sconti se porti la tua borsa.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Compra qualità, non quantità:</strong> È meglio comprare un capo di qualità che dura 
+                        anni piuttosto che 5 capi economici che si rovinano in pochi mesi. Fast fashion è uno dei 
+                        principali problemi ambientali.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Supporta brand sostenibili:</strong> Sempre più marchi adottano pratiche sostenibili. 
+                        Cerca certificazioni come Fair Trade, GOTS (tessuti biologici), o B-Corp.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Usa il trasporto pubblico:</strong> Se possibile, raggiungi il centro commerciale con 
+                        mezzi pubblici invece che con l'auto. Riduce emissioni e spesso è anche più comodo (niente 
+                        problemi di parcheggio!).
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 8 -->
+            <article class="blog-card">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-date">5 Novembre 2025</div>
+                    <h3>App Indispensabili per lo Shopping Intelligente</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Tecnologia</span>
+                        <span class="blog-tag">App</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Il tuo smartphone può essere il migliore alleato per lo shopping. Ecco le app che ogni shopper 
+                        intelligente dovrebbe avere.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Mall Nav:</strong> Ovviamente! Trova il percorso più breve tra 
+                        negozi e risparmia ore di cammino inutile. Perfetto per centri grandi come Porta di Roma.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Comparatori di prezzi:</strong> App come Trovaprezzi o idealo ti permettono di scansionare 
+                        codici a barre e vedere se lo stesso prodotto costa meno altrove.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>App fedeltà:</strong> Scarica le app dei tuoi negozi preferiti. Spesso includono coupon 
+                        esclusivi, notifiche su saldi privati, e programmi punti.
+                    </p>
+                    <p class="blog-excerpt">
+                        <strong>Budget tracker:</strong> App come Money Manager o Wallet ti aiutano a tracciare le spese 
+                        e rimanere nel budget.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

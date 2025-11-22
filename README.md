@@ -1,4 +1,4 @@
-# 🗺️ Navigatore Centri Commerciali
+# 🗺️ Mall Nav
 
 Sistema di navigazione intelligente per centri commerciali che permette di trovare il percorso più breve tra i negozi.
 
@@ -217,4 +217,4 @@ Per segnalazioni o richieste:
 
 **Sviluppato con ❤️ per facilitare lo shopping nei centri commerciali**
 
-© 2025 Navigatore Centri Commerciali - Tutti i diritti riservati
+© 2025 Mall Nav - Tutti i diritti riservati
